@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Casa Comigo?</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f0f0f0;
+            margin: 50px;
+        }
+        .question {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        .buttons {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 18px;
+            margin: 10px;
+            cursor: pointer;
+            border: none;
+            color: white;
+        }
+        .yes {
+            background-color: #4CAF50;
+        }
+        .no {
+            background-color: #f44336;
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+    <div class="question">Casa comigo?</div>
+    <div class="buttons">
+        <button class="yes" onclick="alert('Sim! ❤️')">Sim</button>
+        <button class="no" onmouseover="moveButton()">Não</button>
+    </div>
+
+    <script>
+        function moveButton() {
+            var noButton = document.querySelector('.no');
+            var x = Math.floor(Math.random() * window.innerWidth - noButton.offsetWidth);
+            var y = Math.floor(Math.random() * window.innerHeight - noButton.offsetHeight);
+            noButton.style.left = x + 'px';
+            noButton.style.top = y + 'px';
+        }
+    </script>
+</body>
+</html>
